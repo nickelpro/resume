@@ -1,0 +1,263 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Developer CV
+% LaTeX Class
+% Version 2.0 (12/10/23)
+%
+% This class originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Omar Roldan
+% Based on a template by  Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+\usepackage{multicol}
+\setlength{\columnsep}{0mm}
+%----------------------------------------------------------------------------------------
+\usepackage{lipsum}
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.5\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Vito Gamberini}}}} % First name
+
+	\vspace{6pt}
+
+	{\Large Developer $\sim$ Computer Engineer} % Career or current job title
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\textwidth} % 20% of the page width for the first row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	\icon{Globe}{11}{\href{https://vito.nyc}{vito.nyc}}\\
+	\icon{Phone}{11}{631-912-5918}\\
+	\icon{MapMarker}{11}{New York City, NY}\\
+
+\end{minipage}
+\begin{minipage}[t]{0.27\textwidth} % 27% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\icon{Envelope}{11}{\href{mailto:vito@gamberini.email}{vito@gamberini.email}}\\
+	\icon{Github}{11}{\href{https://github.com/nickelpro}{/nickelpro}}\\
+	\icon{LinkedinSquare}{11}{\href{https://www.linkedin.com/in/vito-gamberini}{/in/vito-gamberini}}\\
+
+\end{minipage}
+
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.46\textwidth}
+	\cvsect{Summary}
+	\vspace{-6pt}
+
+	Passionate about cross-domain digital systems engineering and performance
+	applications. Formerly a submarine reactor operator with the U.S. Navy,
+	experienced with high-speed, high-stakes engineering teams.
+\end{minipage}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.465\textwidth}
+	\cvsect{Skills}
+	\vspace{-6pt}
+
+	\begin{minipage}[t]{0.2\textwidth}
+		\textbf{Languages:}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.73\textwidth}
+		C++, C, Python, SystemVerilog, Bash, SQL, x86 Assembly, Javascript
+	\end{minipage}
+	\vspace{4mm}
+
+	\begin{minipage}[t]{0.2\textwidth}
+		\textbf{Technologies:}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.73\textwidth}
+		CMake, vcpkg, LLVM, Linux, Docker, GH Actions, Codecov, Verilator, npm, LaTeX
+	\end{minipage}
+
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+\cvsect{Recent Projects}
+\begin{fullentrylist}
+	\fullentry
+	{E20 Binutils Suite (C++)}
+	{\textbf{Proprietary}}
+	{
+		Complete binutils suite for the E20 pedagogical machine language, including
+		assembler, disassembler, linker, simulator, and debugger. Used by hundreds of
+		students in the New York University Computer Architecture course each
+		semester.
+	}
+	\fullentry
+	{NYU Processor Design Build System (CMake / C++)}
+	{
+		\icon{Github}{}
+		{\href{https://github.com/NYU-Processor-Design/component-template}{\textbf{Github Link}}}
+	}
+	{
+		System for building, testing, generating coverage reports, and packaging
+		SystemVerilog components. Adapts vcpkg and CMake to support a different
+		language paradigm while seamlessly integrating with the Verilator C++ code
+		generation tool.
+	}
+	\fullentry
+	{Velocem (C / Python)}
+	{
+		\icon{Github}{}
+		{\href{https://github.com/nickelpro/velocem}{\textbf{Github Link}}}
+	}
+	{
+		Current research project under active development, a hyperspeed Python web,
+		development framework. Benchmarks as the second lowest latency Python
+		application server implementation publicly available.
+	}
+	\fullentry
+	{PurdNyUart (SystemVerilog)}
+	{
+		\icon{Github}{}
+		{\href{https://github.com/NYU-Processor-Design/PurdNyUart}{\textbf{Github Link}}}
+	}
+	{
+		Complete universal asynchronous receiver/transmitter design used as the
+		initial bootstrapping interface for Purdue's AFTx07 chip. Features a novel
+		digital baud rate generator, as well as 100\% automated test coverage of
+		the entire design.
+	}
+\end{fullentrylist}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\vspace{-10 pt}
+\cvsect{Experience}
+\begin{entrylist}
+	\entry
+	{9/2021 -- Present}
+	{Teaching Assistant}
+	{\textbf{NYU Tandon School of Engineering}}
+	{\vspace{-10pt}
+		\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+			\item Develop and present lecture materials on topics including
+			      intermediate-level C/C++ usage, processor instruction decoding,
+			      pipelining, speculative execution, and cache coherence protocols.
+		\end{itemize}
+	}
+	\entry
+	{3/2014 -- 6/2020}
+	{Submarine Nuclear Reactor Operator}
+	{\textbf{United States Navy}}
+	{\vspace{-10pt}
+		\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+			\item Operated and maintained I\&C systems directly involved with the
+			      primary reactor plant
+			\item Maintenance Lead for the upgrade of primary reactor equipment.
+			      Developed operational, maintenance, and troubleshooting procedures
+			      for ten unique maintenance operations, completed dozens of
+			      non-routine testing operations, and supervised hundreds of
+			      routine maintenance tasks.
+
+		\end{itemize}
+	}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\vspace{-10 pt}
+\cvsect{Education}
+\begin{entrylist}
+	\entry
+	{9/2020 - Present}
+	{Computer Engineering, B.S. \footnotesize{(expected grad. May 2024)}}
+	{\textbf{NYU Tandon School of Engineering}}
+	{
+		\textbf{Relevant Coursework:} Transistor Based Design, Operating Systems,
+		Computer Architecture, Embedded Programming,
+		Digital Logic \& State Machine Design,
+		Programming Languages \& Implementation
+	}
+	\entry
+	{5/2014 - 6/2016}
+	{Electronics Technician, Nuclear Field}
+	{\textbf{Naval Nuclear Power Training Command}}
+	{
+		\textbf{Relevant Coursework:} AC/DC Circuit Analysis, Transistor Theory,
+		Digital Test Equipment, IC Maintenance \& Repair, Receivers/Transmitters
+		\& Pulse Techniques
+	}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	Writings
+%----------------------------------------------------------------------------------------
+\vspace{-10 pt}
+\cvsect{Select Writings}
+\begin{entrylist}
+	\entry
+	{Dec 2023}
+	{Balm in GILead: Fast string construction for CPython extensions}
+	{
+		\icon{Globe}{}
+		{\href{https://blog.vito.nyc/posts/gil-balm}{\textbf{Article Link}}}
+	}
+	{
+		An unorthodox approach to optimizing Python C extensions that operate on
+		Python strings. The described technique achieves a \textbf{5x} improvement
+		on single-threaded benchmarks and up to a \textbf{20x} improvement on
+		multi-threaded benchmarks.
+	}
+	\entry
+	{Dec 2022}
+	{Modern CMake Packaging: A Guide}
+	{
+		\icon{Globe}{}
+		{\href{https://blog.vito.nyc/posts/cmake-pkg}{\textbf{Article Link}}}
+	}
+	{
+		Complete guide to packaging facilities of modern CMake with a focus on
+		correctness. Places an emphasis on understanding the mechanisms of
+		packaging and discoverability instead of rote copy-pasting of build system
+		boilerplate.
+
+	}
+	\entry
+	{Jul 2022}
+	{Upside Down Polymorphic Inheritance: Leveraging P2162 for Fun \& Profit}
+	{
+		\icon{Globe}{}
+		{\href{https://blog.vito.nyc/posts/p2162}{\textbf{Article Link}}}
+	}
+	{
+		An introduction to the usage and applications of the C++20 feature that
+		allows for inheriting from and extending \texttt{std::variant}. This enables value-semantics to be used in conjunction with closed-set polymorphic types.
+	}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
