@@ -85,7 +85,7 @@
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.73\textwidth}
-		C++, C, Python, SystemVerilog, Bash, SQL, x86 Assembly, Javascript
+		C++, C, Python, Javascript, Bash, SQL, SystemVerilog, x86 Assembly
 	\end{minipage}
 	\vspace{4mm}
 
@@ -94,7 +94,7 @@
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.73\textwidth}
-		CMake, vcpkg, LLVM, Linux, Docker, GH Actions, Codecov, Verilator, npm, LaTeX
+		CMake, git, vcpkg, LLVM, Linux, Docker, GH Actions, Codecov, Verilator, LaTeX
 	\end{minipage}
 
 \end{minipage}
@@ -104,6 +104,28 @@
 %----------------------------------------------------------------------------------------
 \cvsect{Recent Projects}
 \begin{fullentrylist}
+	\fullentry
+	{nanoroute (C++ / Python)}
+	{
+		\icon{Globe}{}
+		{\href{https://nanoroute.dev/}{\textbf{Website}}}
+	}
+	{
+		The fastest HTTP URL router available for Python, outpaces industry-standard
+		solutions such as Werkzeug and Starlette by a factor of \textbf{20x} to
+		\textbf{30x}. Supports typical use-cases such as PEP 3333 WSGI services.
+	}
+	\fullentry
+	{Velocem (C++ / Python)}
+	{
+		\icon{Github}{}
+		{\href{https://github.com/nickelpro/velocem}{\textbf{Github Link}}}
+	}
+	{
+		Current research project under active development, a hyperspeed Python web
+		development framework. Benchmarks as the lowest latency Python application
+		server implementation publicly available.
+	}
 	\fullentry
 	{E20 Binutils Suite (C++)}
 	{\textbf{Proprietary}}
@@ -125,29 +147,18 @@
 		language paradigm while seamlessly integrating with the Verilator C++ code
 		generation tool.
 	}
-	\fullentry
-	{Velocem (C / Python)}
-	{
-		\icon{Github}{}
-		{\href{https://github.com/nickelpro/velocem}{\textbf{Github Link}}}
-	}
-	{
-		Current research project under active development, a hyperspeed Python web,
-		development framework. Benchmarks as the second lowest latency Python
-		application server implementation publicly available.
-	}
-	\fullentry
-	{PurdNyUart (SystemVerilog)}
-	{
-		\icon{Github}{}
-		{\href{https://github.com/NYU-Processor-Design/PurdNyUart}{\textbf{Github Link}}}
-	}
-	{
-		Complete universal asynchronous receiver/transmitter design used as the
-		initial bootstrapping interface for Purdue's AFTx07 chip. Features a novel
-		digital baud rate generator, as well as 100\% automated test coverage of
-		the entire design.
-	}
+	% \fullentry
+	% {PurdNyUart (SystemVerilog)}
+	% {
+	% 	\icon{Github}{}
+	% 	{\href{https://github.com/NYU-Processor-Design/PurdNyUart}{\textbf{Github Link}}}
+	% }
+	% {
+	% 	Complete universal asynchronous receiver/transmitter design used as the
+	% 	initial bootstrapping interface for Purdue's AFTx07 chip. Features a novel
+	% 	digital baud rate generator, as well as 100\% automated test coverage of
+	% 	the entire design.
+	% }
 \end{fullentrylist}
 
 %----------------------------------------------------------------------------------------
@@ -162,8 +173,11 @@
 	{\textbf{Kitware, Inc.}}
 	{\vspace{-10pt}
 		\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
-			\item Does great CMake things and is very important, just ask my mom
-			\item Also knows how to use git and stuff
+			\item Developed multiple upstream CMake features, including native
+						pkg-config support, automatic dependency exports, and improvements
+						to the argument parser
+			\item Ported dozens of production codebases to modern CMake \& CI usage.
+			\item Trained teams on modern CMake usages and build practices.
 		\end{itemize}
 	}
 	\entry
@@ -186,10 +200,8 @@
 			\item Operated and maintained I\&C systems directly involved with the
 			      primary reactor plant
 			\item Maintenance Lead for the upgrade of primary reactor equipment.
-			      Developed operational, maintenance, and troubleshooting procedures
-			      for ten unique maintenance operations, completed dozens of
-			      non-routine testing operations, and supervised hundreds of
-			      routine maintenance tasks.
+			      Developed procedures for unique maintenance operations and
+						supervised hundreds of routine maintenance tasks.
 
 		\end{itemize}
 	}
@@ -203,7 +215,7 @@
 \begin{entrylist}
 	\entry
 	{9/2020 - 5/2024}
-	{Computer Engineering, B.S.}
+	{Computer Engineering, BSc}
 	{\textbf{NYU Tandon School of Engineering}}
 	{
 		\textbf{Relevant Coursework:} Operating Systems,
@@ -219,6 +231,18 @@
 \vspace{-10 pt}
 \cvsect{Select Writings}
 \begin{entrylist}
+	\entry
+	{Jun 2024}
+	{Make it Async: Building Shared Async Resources with ASIO}
+	{
+		\icon{Globe}{}
+		{\href{https://blog.vito.nyc/posts/make-it-async/}{\textbf{Article Link}}}
+	}
+	{
+		A demonstration-by-example of managing shared resources in async C++
+		environments, leveraging C++20 coroutines and \texttt{boost::asio} strand
+		executors.
+	}
 	\entry
 	{Dec 2023}
 	{Balm in GILead: Fast string construction for CPython extensions}
@@ -246,17 +270,17 @@
 		boilerplate.
 
 	}
-	\entry
-	{Jul 2022}
-	{Upside Down Polymorphic Inheritance: Leveraging P2162 for Fun \& Profit}
-	{
-		\icon{Globe}{}
-		{\href{https://blog.vito.nyc/posts/p2162}{\textbf{Article Link}}}
-	}
-	{
-		An introduction to the usage and applications of the C++20 feature that
-		allows for inheriting from and extending \texttt{std::variant}. This enables value-semantics to be used in conjunction with closed-set polymorphic types.
-	}
+	% \entry
+	% {Jul 2022}
+	% {Upside Down Polymorphic Inheritance: Leveraging P2162 for Fun \& Profit}
+	% {
+	% 	\icon{Globe}{}
+	% 	{\href{https://blog.vito.nyc/posts/p2162}{\textbf{Article Link}}}
+	% }
+	% {
+	% 	An introduction to the usage and applications of the C++20 feature that
+	% 	allows for inheriting from and extending \texttt{std::variant}. This enables value-semantics to be used in conjunction with closed-set polymorphic types.
+	% }
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
